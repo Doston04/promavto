@@ -1,0 +1,146 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #1D539C;
+  --light-blue: #DBE3EF;
+  --black: #2F2F2F;
+  --text-black: #353437;
+  --gray: #5D5D5F;
+  --white: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 200vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--light-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mainButton {
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 18px 64px;
+  text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: var(--black);
+}
+
+@-webkit-keyframes tomchi {
+  from {
+    top: -20%;
+  }
+  to {
+    top: 92%;
+  }
+}
+
+@keyframes tomchi {
+  from {
+    top: -20%;
+  }
+  to {
+    top: 92%;
+  }
+}
+.bgTomchiBlack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: -1;
+}
+.bgTomchiBlack span {
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+.bgTomchiBlack span:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 1.5px;
+  height: 55px;
+  background-color: var(--blue);
+  -webkit-animation: tomchi 3s linear infinite;
+          animation: tomchi 3s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.bgTomchiBlack span:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 1.5px;
+  height: 55px;
+  background-color: var(--blue);
+  -webkit-animation: tomchi 3s linear infinite;
+          animation: tomchi 3s linear infinite;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.bgTomchiBlack span:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 1.5px;
+  height: 55px;
+  background-color: var(--blue);
+  -webkit-animation: tomchi 3s linear infinite;
+          animation: tomchi 3s linear infinite;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+.header__logo {
+  position: relative;
+  width: 192px;
+  height: 34px;
+}
+.header__logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=basics.css.map */
