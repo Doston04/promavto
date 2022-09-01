@@ -1,0 +1,397 @@
+.heroContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding-bottom: 72px;
+  padding-inline: var(--paddingInside);
+}
+
+.heroCard {
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
+              linear-gradient(90deg, rgba(29, 83, 156, .1), rgba(29, 83, 156, .2));
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(29, 83, 156, .3);
+  position: relative;
+  z-index: 1;
+}
+
+.heroCard__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+}
+
+.heroCard__content:hover .heroCardArrow {
+  transform: translateX(8px);
+  transition: .3s ease;
+}
+
+.heroCard__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heroCard__title {
+  font-family: "Exo 2";
+  font-size: 24px;
+  line-height: 40px;
+  color: var(--white);
+}
+
+.heroCard__subtitle {
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, .56);
+  max-width: 310px;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.heroCardArrow {
+  width: 24px;
+  height: 24px;
+  transition: .3s;
+}
+
+.heroCardBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--blue);
+}
+
+.heroCardBtn span {
+  font-weight: 500;
+  font-family: "Exo 2";
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.heroCard > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52%;
+  height: 100%;
+  object-fit: fill;
+  z-index: -1;
+}
+
+/* === ABOUT === */
+#about .section__inner {
+  padding-inline: 20px;
+}
+
+/* === CATALOGUE === */
+#catalogue {
+  padding-bottom: 105px;
+}
+
+.tabButtonDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.tab__btn {
+  border: 1px solid var(--blue);
+  background-color: var(--white);
+  color: var(--blue);
+  padding: 18px 64px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s; 
+  font-family: "Exo 2";
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.tab__btn:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  transition: .3s;
+}
+
+/* === DEVELOPMENTS === */
+#developments .sectionSubtitle {
+  max-width: 950px;
+}
+
+/* === ISOTHERMIC === */
+#isothermic {
+  background-color: #F8F8F8;
+}
+
+#isothermic .section__inner {
+  padding: 70px 20px;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.isothermic__content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.isothermic__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.isothermic__title {
+  font-family: "Exo 2";
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.isothermic__subtitle {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-black);
+  max-width: 586px;
+  width: 100%;
+}
+
+.isothermicBtn {
+  max-height: 64px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isothermic__btn {
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: "Exo 2";
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 18px 64px;
+  transition: .3s;
+}
+
+.isothermic__btn:hover {
+  background-color: var(--white);
+  color: var(--blue);
+  transition: .3s;
+}
+
+.isothermic__image {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  height: 400px;
+}
+
+.isothermic__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* === PARTNERS === */
+#partners {
+  padding-bottom: 155px;
+}
+
+@media (max-width: 1800px) {
+  .heroContent {
+    padding-bottom: 32px;
+  }
+  .heroCardBtn span {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .heroCard {
+    overflow: hidden;
+  }
+  .heroCard > img {
+    width: 45%;
+    height: 80%;
+    top: 20%;
+  }
+  .heroCard__content {
+    padding: 24px;
+  }
+  .isothermic__btn {
+    padding: 16px 48px;
+  }
+  .isothermic__image {
+    height: 380px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .heroCard > img {
+    width: 40%;
+    height: 70%;
+    top: auto;
+    bottom: 0;
+  } 
+  .isothermic__title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .isothermic__btn {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .isothermic__image {
+    height: 360px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroCard__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 240px;
+  }
+  .heroCard > img {
+    width: 45%;
+    height: 80%;
+  }
+  .isothermic__image {
+    max-width: 550px;
+    height: 320px;
+  }
+  .isothermic__subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 960px) {
+  .heroCard__content {
+    padding: 14px 16px;
+  }
+  .heroCard__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .isothermic__image {
+    max-width: 480px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-bottom: 24px;
+  } 
+  .heroCardBtn span {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .heroCardArrow {
+    width: 20px;
+    height: 20px;
+  }
+  #isothermic .section__inner {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 48px 20px;
+  }
+  .isothermic__image {
+    max-width: 100%;
+    height: 320px;
+  }
+  .isothermic__content {
+    gap: 24px;
+  }
+  .isothermic__texts {
+    gap: 8px;
+  }
+  .isothermic__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .isothermic__subtitle {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
+  }
+  .isothermicBtn {
+    width: 100%;
+  }
+  .isothermic__btn {
+    text-align: center;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #DBE3EF;
+    color: var(--blue);
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroCard {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .24));
+  }
+  .heroCard__content {
+    gap: 4px;
+  }
+  .heroCard__texts {
+    gap: 4px;
+  }
+  .heroCard__subtitle {
+    -webkit-line-clamp: 4;
+    max-width: 200px;
+  }
+  .heroCard > img {
+    width: 45%;
+    height: 80%;
+  }
+  .isothermic__image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroCard > img {
+    width: 40%;
+    height: 60%;
+  }
+  .isothermic__image {
+    height: 200px;
+  }
+}
