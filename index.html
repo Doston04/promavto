@@ -14,48 +14,102 @@
   <link rel="stylesheet" href="./css/home.css">
   <script src="./js/scripts.js" defer></script>
   <script src="./js/indexSwiper.js" defer></script>
+  <script src="./js/index.js" defer></script>
 </head>
 <body class="body">
   <div class="miniHeader">
     <div class="fixedHeader__inner container">
-        <div class="hamburger hamburgerScroll">
+      <div class="hamburgerAbsolute">
+        <div class="hamburger hamburgerScroll hamburgerMenu">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="inner__main">
-          <div class="logo__div">
-            <a href="./index.html" aria-label="home"><img src="./media/logo_blue.png" alt="logo"></a>
+      </div>
+      <div class="inner__main">
+        <div class="logo__div">
+          <a href="./index.html" aria-label="home"><img src="./media/logo_blue.png" alt="logo"></a>
+        </div>
+        <nav class="header__nav">
+          <a class="nav__link scrollLink" href="./services.html" aria-label="services">Услуги</a>
+          <a class="nav__link scrollLink" href="./spectechs.html" aria-label="spectechs">Спецтехники</a>
+          <a class="nav__link scrollLink" href="./parts.html" aria-label="parts">Запчасти</a>
+          <a class="nav__link scrollLink" href="./developments.html" aria-label="developments">Разработки</a>
+          <a class="nav__link scrollLink" href="./isothermic.html" aria-label="isothermic">Изотермика</a>
+          <a class="nav__link scrollLink" href="./contact.html" aria-label="contact">Контакты</a>
+          <div class="extraNavigation scrollExtraNav">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <nav class="header__nav">
-            <a class="nav__link scrollLink" href="./services.html" aria-label="services">Услуги</a>
-            <a class="nav__link scrollLink" href="./spectechs.html" aria-label="spectechs">Спецтехники</a>
-            <a class="nav__link scrollLink" href="./parts.html" aria-label="parts">Запчасти</a>
-            <a class="nav__link scrollLink" href="./developments.html" aria-label="developments">Разработки</a>
-            <a class="nav__link scrollLink" href="./isothermic.html" aria-label="isothermic">Изотермика</a>
-            <a class="nav__link scrollLink" href="./contact.html" aria-label="contact">Контакты</a>
-            <div class="extraNavigation scrollExtraNav">
-              <span></span>
-              <span></span>
-              <span></span>
+        </nav>
+      </div>
+      <div class="header__langChanger">
+        <span class="langName scrollLangName">Py</span>
+        <svg class="chevronDown chevronScroll" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.433 9.4502L12.004 15.8802L5.57397 9.4502" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    <div class="mobileHeader hidden">
+      <div class="mobileHeader__inner">
+        <nav class="mobileNav">
+          <a class="mobileNav__link activeMobileLink" href="./services.html" aria-label="">Услуги</a>
+          <a class="mobileNav__link" href="./spectechs.html" aria-label="">Спецтехники</a>
+          <a class="mobileNav__link" href="./parts.html" aria-label="">Запчасти</a>
+          <a class="mobileNav__link" href="./developments.html" aria-label="">Разработки</a>
+          <a class="mobileNav__link" href="./isothermic.html" aria-label="">Изотермика</a>
+          <a class="mobileNav__link" href="./contact.html" aria-label="">Контакты</a>
+          <a class="mobileNav__link" href="./catalogue.html" aria-label="">Каталог</a>
+          <a class="mobileNav__link" href="./about.html" aria-label="">О компании</a>
+          <a class="mobileNav__link" href="./advantages.html" aria-label="">Наши преимущества</a>
+        </nav>
+        <div class="mobileContent">
+          <div class="mobilePhoneNumber">
+            <div>
+              <a href="tel:+998903169450" aria-label="phoneNumber">+998 90 316 94 50</a>
             </div>
-          </nav>
+            <div>
+              <a href="mailto:info@promavto.uz" aria-label="email">info@promavto.uz</a>
+            </div>
+          </div>  
+          <div class="mobileSocialMedia">
+            <div>
+              <a class="socialMedia" href="#" aria-label="telegram">
+                <svg class="sm__logo" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                  <path d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/>
+                </svg>
+              </a>
+            </div>
+            <div>
+              <a class="socialMedia" href="#" aria-label="instagram">
+                <svg class="sm__logo" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                </svg>
+              </a>
+            </div>
+            <div>
+              <a class="socialMedia" href="#" aria-label="youtube">
+                <svg class="sm__logo" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p class="copyTextMobile">&copy; <span class="currentYearSpan"></span> Promavto</p>
         </div>
-        <div class="header__langChanger">
-          <span class="langName scrollLangName">Py</span>
-          <svg class="chevronDown chevronScroll" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18.433 9.4502L12.004 15.8802L5.57397 9.4502" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
+      </div>
     </div>
   </div>
   <div class="fixedHeader">
     <div class="header__scroll container">
-        <div class="hamburger hamburgerScroll">
+        <div class="hamburgerAbsolute">
+        <div class="hamburger hamburgerScroll hamburgerMenu">
           <span></span>
           <span></span>
           <span></span>
         </div>
+      </div>
         <div class="inner__main">
           <div class="logo__div">
             <a href="./index.html" aria-label="home"><img src="./media/logo_blue.png" alt="logo"></a>
@@ -85,11 +139,13 @@
   <div class="hero">
     <header>
       <div class="header__inner container">
-        <div class="hamburger">
+        <div class="hamburgerAbsolute">
+        <div class="hamburger hamburgerScroll hamburgerMenu">
           <span></span>
           <span></span>
           <span></span>
         </div>
+      </div>
         <div class="inner__main">
           <div class="logo__div">
             <a href="./index.html" aria-label="home"><img src="./media/logo.png" alt="logo"></a>
@@ -364,7 +420,83 @@
         <p class="sectionTitle">Каталог</p>
         <div class="tabButtonDiv">
           <span class="tab__btn">СПЕЦТЕХНИКА</span>
-          <span class="tab__btn isActive">запчасти</span>
+          <span class="tab__btn active">запчасти</span>
+        </div>
+        <div class="catalogueContainer active">
+          <div class="product">
+            <a class="productLink" href="#">
+              <div class="product__content">
+                <p class="product__title">Вахтовый автобус</p>
+                <p class="product__subtitle">это специальный автомобиль, предназначенный для транспортировки рабочих бригад к месту выполнения строительных, ремонтных и аварийных работ я строительных, ремонтных и аварийных работ</p>
+              </div>
+              <div class="product__image"><img src="./media/zapcast.png" alt="zapcast"></div>
+            </a>
+          </div>
+          <div class="product">
+            <a class="productLink" href="#">
+              <div class="product__content">
+                <p class="product__title">Вахтовый автобус</p>
+                <p class="product__subtitle">это специальный автомобиль, предназначенный для транспортировки рабочих бригад к месту выполнения строительных, ремонтных и аварийных работ я строительных, ремонтных и аварийных работ</p>
+              </div>
+              <div class="product__image"><img src="./media/truck.png" alt="zapcast"></div>
+            </a>
+          </div>
+          <div class="product">
+            <a class="productLink" href="#">
+              <div class="product__content">
+                <p class="product__title">Вахтовый автобус</p>
+                <p class="product__subtitle">это специальный автомобиль, предназначенный для транспортировки рабочих бригад к месту выполнения строительных, ремонтных и аварийных работ я строительных, ремонтных и аварийных работ</p>
+              </div>
+              <div class="product__image"><img src="./media/zapcast.png" alt="zapcast"></div>
+            </a>
+          </div>
+          <div class="product">
+            <a class="productLink" href="#">
+              <div class="product__content">
+                <p class="product__title">Вахтовый автобус</p>
+                <p class="product__subtitle">это специальный автомобиль, предназначенный для транспортировки рабочих бригад к месту выполнения строительных, ремонтных и аварийных работ я строительных, ремонтных и аварийных работ</p>
+              </div>
+              <div class="product__image"><img src="./media/truck.png" alt="zapcast"></div>
+            </a>
+          </div>
+        </div>
+        <div class="catalogueContainer">
+          <div class="product">
+            <a class="productLink" href="#">
+              <div class="product__content">
+                <p class="product__title">Arava</p>
+                <p class="product__subtitle">это специальный автомобиль, предназначенный для транспортировки рабочих бригад к месту выполнения строительных, ремонтных и аварийных работ я строительных, ремонтных и аварийных работ</p>
+              </div>
+              <div class="product__image"><img src="./media/zapcast.png" alt="zapcast"></div>
+            </a>
+          </div>
+          <div class="product">
+            <a class="productLink" href="#">
+              <div class="product__content">
+                <p class="product__title">Samolyot</p>
+                <p class="product__subtitle">это специальный автомобиль, предназначенный для транспортировки рабочих бригад к месту выполнения строительных, ремонтных и аварийных работ я строительных, ремонтных и аварийных работ</p>
+              </div>
+              <div class="product__image"><img src="./media/truck.png" alt="zapcast"></div>
+            </a>
+          </div>
+          <div class="product">
+            <a class="productLink" href="#">
+              <div class="product__content">
+                <p class="product__title">Arava</p>
+                <p class="product__subtitle">это специальный автомобиль, предназначенный для транспортировки рабочих бригад к месту выполнения строительных, ремонтных и аварийных работ я строительных, ремонтных и аварийных работ</p>
+              </div>
+              <div class="product__image"><img src="./media/zapcast.png" alt="zapcast"></div>
+            </a>
+          </div>
+          <div class="product">
+            <a class="productLink" href="#">
+              <div class="product__content">
+                <p class="product__title">Samolyot</p>
+                <p class="product__subtitle">это специальный автомобиль, предназначенный для транспортировки рабочих бригад к месту выполнения строительных, ремонтных и аварийных работ я строительных, ремонтных и аварийных работ</p>
+              </div>
+              <div class="product__image"><img src="./media/truck.png" alt="zapcast"></div>
+            </a>
+          </div>
         </div>
         <div class="centeredDiv">
           <div class="centerBtnDiv"><a class="centerBtn" href="#">Посмотреть все</a></div>
@@ -394,9 +526,108 @@
       </div>
     </div>
     <div id="services" class="section">
-      <div class="section__inner">
+      <div class="section__inner container">
         <div class="sectionTitle">Сервисы</div>
-        <div class="servicesGridContainer">pp</div>
+        <div class="servicesGridContainer">
+          <div class="servicesList">
+            <div class="service">
+              <div class="serviceNameDiv">
+                <span class="service__name">Замена</span>
+                <svg class="serviceArrow" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.9999 18.3404C33.6252 17.9679 33.1183 17.7588 32.5899 17.7588C32.0615 17.7588 31.5546 17.9679 31.1799 18.3404L23.9999 25.4204L16.9199 18.3404C16.5452 17.9679 16.0383 17.7588 15.5099 17.7588C14.9815 17.7588 14.4746 17.9679 14.0999 18.3404C13.9124 18.5263 13.7637 18.7475 13.6621 18.9912C13.5606 19.2349 13.5083 19.4964 13.5083 19.7604C13.5083 20.0244 13.5606 20.2858 13.6621 20.5295C13.7637 20.7732 13.9124 20.9944 14.0999 21.1804L22.5799 29.6604C22.7658 29.8478 22.987 29.9966 23.2307 30.0982C23.4745 30.1997 23.7359 30.252 23.9999 30.252C24.2639 30.252 24.5253 30.1997 24.7691 30.0982C25.0128 29.9966 25.234 29.8478 25.4199 29.6604L33.9999 21.1804C34.1874 20.9944 34.3361 20.7732 34.4377 20.5295C34.5392 20.2858 34.5915 20.0244 34.5915 19.7604C34.5915 19.4964 34.5392 19.2349 34.4377 18.9912C34.3361 18.7475 34.1874 18.5263 33.9999 18.3404Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="serviceTextDiv active">
+                <p class="service__text">Полная замена фургона спецтехники на шасси любых автомобилей. Производится когда ресурс шасси еще не израсходован, а фургон непригоден для ремонта или значительно изношен, имеется или значительно изношен, имеется</p>
+                <div class="heroCardBtn">
+                  <span>Подробнее</span>
+                  <svg class="heroCardArrow" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z" stroke="#1D539C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 16.5L16 12.5L12 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 12.5H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="service">
+              <div class="serviceNameDiv">
+                <span class="service__name">Доработка</span>
+                <svg class="serviceArrow" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.9999 18.3404C33.6252 17.9679 33.1183 17.7588 32.5899 17.7588C32.0615 17.7588 31.5546 17.9679 31.1799 18.3404L23.9999 25.4204L16.9199 18.3404C16.5452 17.9679 16.0383 17.7588 15.5099 17.7588C14.9815 17.7588 14.4746 17.9679 14.0999 18.3404C13.9124 18.5263 13.7637 18.7475 13.6621 18.9912C13.5606 19.2349 13.5083 19.4964 13.5083 19.7604C13.5083 20.0244 13.5606 20.2858 13.6621 20.5295C13.7637 20.7732 13.9124 20.9944 14.0999 21.1804L22.5799 29.6604C22.7658 29.8478 22.987 29.9966 23.2307 30.0982C23.4745 30.1997 23.7359 30.252 23.9999 30.252C24.2639 30.252 24.5253 30.1997 24.7691 30.0982C25.0128 29.9966 25.234 29.8478 25.4199 29.6604L33.9999 21.1804C34.1874 20.9944 34.3361 20.7732 34.4377 20.5295C34.5392 20.2858 34.5915 20.0244 34.5915 19.7604C34.5915 19.4964 34.5392 19.2349 34.4377 18.9912C34.3361 18.7475 34.1874 18.5263 33.9999 18.3404Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="serviceTextDiv">
+                <p class="service__text">Полная замена фургона спецтехники на шасси любых автомобилей. Производится когда ресурс шасси еще не израсходован, а фургон непригоден для ремонта или значительно изношен, имеется или значительно изношен, имеется</p>
+                <div class="heroCardBtn">
+                  <span>Подробнее</span>
+                  <svg class="heroCardArrow" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z" stroke="#1D539C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 16.5L16 12.5L12 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 12.5H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="service">
+              <div class="serviceNameDiv">
+                <span class="service__name">Модернизация</span>
+                <svg class="serviceArrow" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.9999 18.3404C33.6252 17.9679 33.1183 17.7588 32.5899 17.7588C32.0615 17.7588 31.5546 17.9679 31.1799 18.3404L23.9999 25.4204L16.9199 18.3404C16.5452 17.9679 16.0383 17.7588 15.5099 17.7588C14.9815 17.7588 14.4746 17.9679 14.0999 18.3404C13.9124 18.5263 13.7637 18.7475 13.6621 18.9912C13.5606 19.2349 13.5083 19.4964 13.5083 19.7604C13.5083 20.0244 13.5606 20.2858 13.6621 20.5295C13.7637 20.7732 13.9124 20.9944 14.0999 21.1804L22.5799 29.6604C22.7658 29.8478 22.987 29.9966 23.2307 30.0982C23.4745 30.1997 23.7359 30.252 23.9999 30.252C24.2639 30.252 24.5253 30.1997 24.7691 30.0982C25.0128 29.9966 25.234 29.8478 25.4199 29.6604L33.9999 21.1804C34.1874 20.9944 34.3361 20.7732 34.4377 20.5295C34.5392 20.2858 34.5915 20.0244 34.5915 19.7604C34.5915 19.4964 34.5392 19.2349 34.4377 18.9912C34.3361 18.7475 34.1874 18.5263 33.9999 18.3404Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="serviceTextDiv">
+                <p class="service__text">Полная замена фургона спецтехники на шасси любых автомобилей. Производится когда ресурс шасси еще не израсходован, а фургон непригоден для ремонта или значительно изношен, имеется или значительно изношен, имеется</p>
+                <div class="heroCardBtn">
+                  <span>Подробнее</span>
+                  <svg class="heroCardArrow" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z" stroke="#1D539C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 16.5L16 12.5L12 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 12.5H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="service">
+              <div class="serviceNameDiv">
+                <span class="service__name">Проектирование</span>
+                <svg class="serviceArrow" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.9999 18.3404C33.6252 17.9679 33.1183 17.7588 32.5899 17.7588C32.0615 17.7588 31.5546 17.9679 31.1799 18.3404L23.9999 25.4204L16.9199 18.3404C16.5452 17.9679 16.0383 17.7588 15.5099 17.7588C14.9815 17.7588 14.4746 17.9679 14.0999 18.3404C13.9124 18.5263 13.7637 18.7475 13.6621 18.9912C13.5606 19.2349 13.5083 19.4964 13.5083 19.7604C13.5083 20.0244 13.5606 20.2858 13.6621 20.5295C13.7637 20.7732 13.9124 20.9944 14.0999 21.1804L22.5799 29.6604C22.7658 29.8478 22.987 29.9966 23.2307 30.0982C23.4745 30.1997 23.7359 30.252 23.9999 30.252C24.2639 30.252 24.5253 30.1997 24.7691 30.0982C25.0128 29.9966 25.234 29.8478 25.4199 29.6604L33.9999 21.1804C34.1874 20.9944 34.3361 20.7732 34.4377 20.5295C34.5392 20.2858 34.5915 20.0244 34.5915 19.7604C34.5915 19.4964 34.5392 19.2349 34.4377 18.9912C34.3361 18.7475 34.1874 18.5263 33.9999 18.3404Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="serviceTextDiv">
+                <p class="service__text">Полная замена фургона спецтехники на шасси любых автомобилей. Производится когда ресурс шасси еще не израсходован, а фургон непригоден для ремонта или значительно изношен, имеется или значительно изношен, имеется</p>
+                <div class="heroCardBtn">
+                  <span>Подробнее</span>
+                  <svg class="heroCardArrow" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z" stroke="#1D539C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 16.5L16 12.5L12 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 12.5H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="service">
+              <div class="serviceNameDiv">
+                <span class="service__name">УЗВ-кормовые технологии</span>
+                <svg class="serviceArrow" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.9999 18.3404C33.6252 17.9679 33.1183 17.7588 32.5899 17.7588C32.0615 17.7588 31.5546 17.9679 31.1799 18.3404L23.9999 25.4204L16.9199 18.3404C16.5452 17.9679 16.0383 17.7588 15.5099 17.7588C14.9815 17.7588 14.4746 17.9679 14.0999 18.3404C13.9124 18.5263 13.7637 18.7475 13.6621 18.9912C13.5606 19.2349 13.5083 19.4964 13.5083 19.7604C13.5083 20.0244 13.5606 20.2858 13.6621 20.5295C13.7637 20.7732 13.9124 20.9944 14.0999 21.1804L22.5799 29.6604C22.7658 29.8478 22.987 29.9966 23.2307 30.0982C23.4745 30.1997 23.7359 30.252 23.9999 30.252C24.2639 30.252 24.5253 30.1997 24.7691 30.0982C25.0128 29.9966 25.234 29.8478 25.4199 29.6604L33.9999 21.1804C34.1874 20.9944 34.3361 20.7732 34.4377 20.5295C34.5392 20.2858 34.5915 20.0244 34.5915 19.7604C34.5915 19.4964 34.5392 19.2349 34.4377 18.9912C34.3361 18.7475 34.1874 18.5263 33.9999 18.3404Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="serviceTextDiv">
+                <p class="service__text">Полная замена фургона спецтехники на шасси любых автомобилей. Производится когда ресурс шасси еще не израсходован, а фургон непригоден для ремонта или значительно изношен, имеется или значительно изношен, имеется</p>
+                <div class="heroCardBtn">
+                  <span>Подробнее</span>
+                  <svg class="heroCardArrow" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z" stroke="#1D539C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 16.5L16 12.5L12 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 12.5H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="serviceImageDiv"><img loading="lazy" src="./media/serviceKamaz.png" alt="serviceKamaz"></div>
+        </div>
       </div>
       <div class="backTextDiv">
         <p class="backText">Сервисы</p>
