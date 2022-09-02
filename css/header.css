@@ -9,8 +9,7 @@
 }
 
 .header__inner {
-  padding-top: 65px;
-  padding-inline: 20px;
+  padding: 65px 20px 70px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -366,6 +365,9 @@
 }
 
 @media (max-width: 768px) {
+  header {
+    display: none;
+  }
   .fixedHeader {
     height: 80px;
   }

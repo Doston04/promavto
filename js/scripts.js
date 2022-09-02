@@ -13,12 +13,12 @@ if (window.innerWidth > 600) {
     window.addEventListener("scroll", () => {
         if (this.scrollY >= 10) {
             scrollHeader.style.display = "flex"
-            headerInner.style.display = "none"
+            headerInner.style.visibility = "hidden"
             fixedHeader.style.display = "flex"
         }
         else {
             scrollHeader.style.display = "none"
-            headerInner.style.display = "flex"
+            headerInner.style.visibility = "inherit"
             fixedHeader.style.display = "none"
         }
     })
