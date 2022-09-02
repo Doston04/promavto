@@ -174,7 +174,7 @@
 /* === MOBILE HEADER === */
 .bodyLock {
   height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .mobileHeader {
@@ -286,6 +286,8 @@
   width: 24px;
   height: 1px;
   background-color: var(--white);
+  border-radius: 4px;
+  transition: .3s;
 }
 
 .hamburgerScroll span {
@@ -297,9 +299,10 @@
   transform: rotate(45deg);
   transition: .3s;
 }
+
 .rotate-45deg {
   position: absolute;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
   transition: .3s
 }
 

@@ -5,6 +5,9 @@ const mobileHeader = document.querySelector(".mobileHeader")
 const hamburger = document.querySelector(".hamburgerMenu")
 const mobileHeaderContent = document.querySelector(".mobileHeader__inner")
 const body = document.querySelector("body")
+const span1s = document.querySelectorAll("#span1")
+const span2s = document.querySelectorAll("#span2")
+const span3s = document.querySelectorAll("#span3")
 
 if (window.innerWidth > 600) {
     window.addEventListener("scroll", () => {
@@ -21,15 +24,33 @@ if (window.innerWidth > 600) {
     })
 }
 
+hamburger.addEventListener("click", () => {
+    mobileHeader.classList.toggle("hidden")
+    body.classList.toggle("bodyLock")
+    span1s.forEach(span => {
+        span.classList.toggle("rotate45deg")
+    })
+    span3s.forEach(span => {
+        span.classList.toggle("rotate-45deg")
+    })
+    span2s.forEach(span => {
+        span.classList.toggle("hidden")
+    })
+})
+
 window.addEventListener("click", (e) => {
     if (e.target == mobileHeader) {
         mobileHeader.classList.add("hidden")
         body.classList.toggle("bodyLock")
-    } else if (e.target == mobileHeaderContent) {
-        mobileHeader.classList.add("")
-    } else if (e.target == hamburger) {
-        mobileHeader.classList.toggle("hidden")
-        body.classList.toggle("bodyLock")
+        span1s.forEach(span => {
+            span.classList.toggle("rotate45deg")
+        })
+        span3s.forEach(span => {
+            span.classList.toggle("rotate-45deg")
+        })
+        span2s.forEach(span => {
+            span.classList.toggle("hidden")
+        })
     }
 });
 
