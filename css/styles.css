@@ -47,7 +47,7 @@ a {
   color: currentColor;
 }
 
-.body {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -113,7 +113,6 @@ a {
 .section {
   padding-top: 140px;
   position: relative;
-  border: 1px solid red;
   z-index: 1;
 }
 
