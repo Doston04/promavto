@@ -48,7 +48,7 @@ a {
   color: currentColor;
 }
 
-body {
+.body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -76,7 +76,6 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  /* border: 1px solid red; */
 }
 
 .primaryBtn {
@@ -164,6 +163,7 @@ body {
   justify-content: center;
   margin-top: 40px;
   padding-inline: 20px;
+  position: relative;
 }
 
 .centerBtnDiv {

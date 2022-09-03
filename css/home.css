@@ -1,5 +1,10 @@
 @import "./partners.css";
 
+header {
+  background: none;
+  z-index: 99;
+}
+
 .heroContainer {
   position: absolute;
   bottom: 0;
@@ -24,7 +29,7 @@
   background-repeat: no-repeat;
   border: 1px solid rgba(29, 83, 156, .3);
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .heroCard__content {
@@ -97,6 +102,11 @@
 }
 
 /* === ABOUT === */
+#about {
+  position: relative;
+  z-index: 0;
+}
+
 #about .section__inner {
   padding-inline: 20px;
 }
@@ -104,6 +114,7 @@
 /* === CATALOGUE === */
 #catalogue {
   padding-bottom: 105px;
+  z-index: 0;
 }
 
 .tabButtonDiv {
@@ -152,6 +163,10 @@
 }
 
 /* === DEVELOPMENTS === */
+#developments {
+  position: relative;
+  z-index: 0;
+}
 #developments .section__inner {
   padding-inline: 20px;
 }
@@ -334,6 +349,7 @@
 /* === SERVICES === */
 #services {
   background-color: var(--black);
+  z-index: 0;
 }
 
 #services.section {

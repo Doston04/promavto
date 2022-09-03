@@ -337,7 +337,7 @@ footer {
     line-height: 24px;
   }
   .ndcContainer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 8px;
     align-items: flex-start;
   }
