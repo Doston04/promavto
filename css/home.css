@@ -1,3 +1,5 @@
+@import "./partners.css";
+
 .heroContainer {
   position: absolute;
   bottom: 0;
@@ -454,127 +456,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;  
   overflow: hidden;
-  text-overflow: ellipsis; 
-}
-
-/* === PARTNERS === */
-#partners {
-  padding-bottom: 155px;
-}
-
-.parntersSwiper {
-  margin-top: 64px;
-  position: relative;
-  padding-inline: 20px;
-}
-
-.partnersLink {
-  padding: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #EBEBEB;
-  position: relative;
-  /* z-index: 2; */
-}
-
-.partnersLink::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 3px solid var(--blue);
-  border-left: 3px solid var(--blue);
-  transition: .8s;
-}
-
-.partnersLink::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-top: 3px solid var(--blue);
-  border-right: 3px solid var(--blue);
-  transition: .8s;
-}
-
-.partnersLink:hover::before, .partnersLink:hover::after {
-  width: 50%;
-  height: 50%;
-  transition: .8s;
-}
-
-.partners__image {
-  position: relative;
-  width: 100%;
-  height: 214px;
-  z-index: 1;
-}
-
-.partners__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.buttonsContainer {
-  position: absolute;
-  top: 35%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding-inline: 20px;
-  /* background-color: red; */
-  height: fit-content;
-  z-index: 1;
-}
-
-.swiperBtnDiv {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.swiperChevron {
-  width: 40px;
-  height: 40px;
-  color: var(--white);
-}
-
-.prevBtn, .nextBtn {
-  width: 96px;
-  height: 96px;
-  border: 1px solid var(--blue);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #DBE3EF;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  transition: .3s;
-}
-
-.prevBtn:active, .nextBtn:active {
-  transform: scale(.85);
-  transition: .3s;
-}
-
-.nextBtn .swiperChevron {
-  transform: rotate(180deg);
-  margin-left: 5px;
-}
-
-.prevBtn .swiperChevron {
-  margin-right: 5px;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1800px) {
@@ -601,12 +483,6 @@
   }
   .isothermic__image {
     height: 380px;
-  }
-  .partnersLink {
-    padding: 32px;
-  }
-  .partners__image {
-    height: 200px;
   }
   .developmentsSlide {
     height: 360px;
@@ -646,26 +522,6 @@
   .isothermic__image {
     height: 360px;
     max-width: 600px;
-  }
-  .prevBtn, .nextBtn {
-    width: 64px;
-    height: 64px;
-  }
-  .prevBtn .swiperChevron {
-    margin-right: 2px;
-  }
-  .nextBtn .swiperChevron {
-    margin-left: 2px;
-  }
-  .swiperChevron {
-    width: 24px;
-    height: 24px;
-  }
-  .partnersLink {
-    padding: 24px;
-  }
-  #partners {
-    padding-bottom: 85px;
   }
   .developmentsSlide {
     height: 260px;
@@ -717,18 +573,6 @@
     font-size: 16px;
     line-height: 24px;
   }
-  #partners {
-    padding-bottom: 40px;
-  }
-  .parntersSwiper {
-    margin-top: 30px;
-  }
-  .partners__image {
-    height: 160px;
-  }
-  .partnersLink {
-    padding: 24px;
-  }
   .tabButtonDiv {
     margin-top: 36px;
   }
@@ -748,9 +592,6 @@
   }
   .developmentsSlide {
     height: 220px;
-  }
-  .partnersLink::before, .partnersLink::after {
-    border: 0;
   }
 }
 
@@ -808,18 +649,6 @@
   .tab__btn {
     padding: 12px 20px;
   }
-  .partnersLink {
-    padding: 24px;
-  }
-  #partners {
-    padding-bottom: 40px;
-  }
-  .parntersSwiper {
-    margin-top: 30px;
-  }
-  .partners__image {
-    height: 200px;
-  }
   .developmentsSlide {
     height: 200px;
   }
@@ -871,10 +700,6 @@
   }
   .isothermic__image {
     height: 250px;
-  }
-  #partners .sectionTitle {
-    max-width: 115px;
-    margin: 0 auto;
   }
   #developments .sectionSubtitle {
     text-align: center;

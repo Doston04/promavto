@@ -115,7 +115,7 @@
 }
 
 .clipPath {
-  clip-path: polygon(50% 20%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 20%, 15% 100%, 85% 100%);
   background-color: var(--white);
   color: var(--white);
   max-width: 32px;
@@ -125,7 +125,7 @@
 }
 
 .clipPathLang {
-  clip-path: polygon(50% 20%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 20%, 15% 100%, 85% 100%);
   background-color: var(--white);
   color: var(--white);
   max-width: 32px;
@@ -311,7 +311,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 78px;
+  padding-bottom: 16px;
   overflow-y: scroll;
 }
 

@@ -1,25 +1,3 @@
-var developmentsSwiper = new Swiper(".developmentsSwiper", {
-    breakpoints: {
-        600: {
-            slidesPerView: 1.8,
-            spaceBetween: 14,
-        },
-        768: {
-            slidesPerView: 2.6,
-            spaceBetween: 24,
-        },
-    },
-    slidesPerView: 1,
-    spaceBetween: 16,
-    autoplay: {
-        delay: 1800,
-        disableOnInteraction: false,
-    },
-    speed: 2000,
-    loop: true,
-})
-
-
 var partnersSwiper = new Swiper(".parntersSwiper", {
     breakpoints: {
         600: {
@@ -51,4 +29,25 @@ var partnersSwiper = new Swiper(".parntersSwiper", {
         nextEl: ".nextBtn",
         prevEl: ".prevBtn",
     },
-}); 
+});
+
+var developmentsSwiper = new Swiper(".developmentsSwiper", {
+    breakpoints: {
+        600: {
+            slidesPerView: 1.8,
+            spaceBetween: 14,
+        },
+        768: {
+            slidesPerView: 2.6,
+            spaceBetween: 24,
+        },
+    },
+    slidesPerView: 1,
+    spaceBetween: 16,
+    autoplay: {
+        delay: 1800,
+        disableOnInteraction: false,
+    },
+    speed: 2000,
+    loop: true,
+})
