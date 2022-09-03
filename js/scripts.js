@@ -54,6 +54,25 @@ window.addEventListener("click", (e) => {
     }
 });
 
+const langChanger = document.querySelector(".header__langChanger")
+const langMenu = document.querySelector(".extraNavBoxLang")
+const chevronScroll = document.querySelector(".chevronParent")
+langChanger.addEventListener("click", () => {
+    toggleLangMenu()
+    chevronScroll.classList.toggle("rotateChevron")
+})
+
+let clicked = false
+const toggleLangMenu = () => {
+    if (clicked) {
+        langMenu.style.display = "none"
+        clicked = false
+    } else {
+        langMenu.style.display = "flex"
+        clicked = true
+    }
+}
+
 const currentYear = new Date().getFullYear()
 const spans = document.querySelectorAll(".currentYearSpan")
 spans.forEach(span => {
