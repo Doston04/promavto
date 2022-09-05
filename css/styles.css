@@ -76,6 +76,7 @@ a {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  /* border: 1px solid red; */
 }
 
 .primaryBtn {
@@ -368,6 +369,8 @@ a {
   display: flex;
   align-items: center;
   gap: 16px;
+  width: 100%;
+  justify-content: center;
 }
 
 .pageNavigation__text {
@@ -378,6 +381,15 @@ a {
   color: var(--white);
 }
 
+.pageNavigation__text.blue {
+  max-width: 320px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
 .pageTitle {
   font-family: "Exo 2";
   font-size: 72px;
@@ -386,6 +398,13 @@ a {
   color: var(--white);
   text-transform: uppercase;
   text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  max-width: 1278px;
+  width: 100%;
 }
 
 .blue {
@@ -477,8 +496,22 @@ a {
 }
 
 /* === CATALOGUE - PRODUCTS === */
-.catalogueContainer.active {
+.catalogueToggle.active {
+  display: block;
+}
+
+.catalogueToggle {
+  display: none;
+}
+
+.catalogueContainer {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 72px;
+  margin-top: 88px;
+  transition: .3s;
+  padding-inline: 20px;
 }
 
 .catalogueSection {
@@ -492,16 +525,6 @@ a {
   grid-template-columns: 1fr 1fr;
   column-gap: 24px;
   row-gap: 72px;
-  transition: .3s;
-  padding-inline: 20px;
-}
-
-.catalogueContainer {
-  display: none;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 24px;
-  row-gap: 72px;
-  margin-top: 88px;
   transition: .3s;
   padding-inline: 20px;
 }

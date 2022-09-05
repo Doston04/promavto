@@ -1,5 +1,6 @@
-const catalogueContainers = document.querySelectorAll(".catalogueContainer")
+const catalogueContainers = document.querySelectorAll(".catalogueToggle")
 const buttons = document.querySelectorAll(".tab__btn")
+const links = document.querySelectorAll(".centeredDiv")
 
 buttons.forEach((btn, i) => {
   btn.addEventListener("click", () => {
@@ -9,9 +10,13 @@ buttons.forEach((btn, i) => {
     buttons.forEach(btn => {
       btn.classList.remove("active")
     })
+    links.forEach(link => {
+      link.classList.remove("active")
+    })
 
     catalogueContainers[i].classList.add("active")
     buttons[i].classList.add("active")
+    links[i].classList.add("active")
   })
 })
 
