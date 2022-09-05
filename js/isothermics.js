@@ -26,12 +26,18 @@ btns.forEach(btn => {
     })
 })
 
-window.addEventListener("click", (e) => {
-    if (e.target == modal) {
-        modal.style.display = "none"
-    } else if (e.target == xBtn) {
-        modal.style.display = "none"
-    } else if (e.target == modalContent) {
-        modal.style.display = "flex"
-    }
+xBtn.addEventListener("click", () => {
+    modal.style.display = "none"
 })
+
+if (window.innerWidth > 600) {
+    window.addEventListener("click", (e) => {
+        if (e.target == modal) {
+            modal.style.display = "none"
+        } else if (e.target == xBtn) {
+            modal.style.display = "none"
+        } else if (e.target == modalContent) {
+            modal.style.display = "flex"
+        }
+    })
+}
