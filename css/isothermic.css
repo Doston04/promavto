@@ -91,9 +91,8 @@
   border-bottom: none;
 }
 
-.isothermic .section__inner {
-  display: grid;
-  grid-template-columns: .45fr .55fr;
+.isothermic__inner {
+  display: flex;
   align-items: center;
   gap: 24px;
   padding: 96px 20px 100px 20px;
@@ -111,7 +110,7 @@
 }
 
 .isothermicContent {
-  width: 100%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -166,29 +165,27 @@
   line-height: 28px;
   font-weight: 500;
   text-transform: uppercase;
+  cursor: pointer;
   transition: .3s;
 }
 
 .isothermicImageDiv {
-  width: 100%;
-  border: 1px solid green;
-  display: flex;
-  flex-direction: column;
+  width: 60%;
   gap: 20px;
 }
 
 .miniImagesDiv {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 20px;
+  margin-top: 20px;
 }
 
-.image .active {
-  position: relative;
-  width: 100%;
-  height: 430px;
-  cursor: pointer;
-  display: block;
+.miniImage {
+  opacity: .5;
+}
+
+.miniImage.swiper-slide-thumb-active {
+  opacity: 1;
+  border: 1px solid var(--blue);
+  transition: .3s;
 }
 
 .image {
@@ -196,38 +193,18 @@
   width: 100%;
   height: 430px;
   cursor: pointer;
-  display: block;
+  overflow: hidden;
 }
 
-.imageImage, .imageImage2 {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.miniImage, .miniImage2 {
+.miniImage {
   position: relative;
-  border: 1px solid blue;
   height: 110px;
   cursor: pointer;
   transition: .3s;
   overflow: hidden;
 }
 
-.miniImage img, .miniImage2 img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-}
-
-.button:active, .button.active:active, .isothermic__link:active, .miniImage:active, .miniImage2:active {
+.button:active, .button.active:active, .isothermic__link:active, .buttonSubmit:active, .xBtn:active {
   transform: scale(.85);
   transition: .3s;
 }
@@ -236,16 +213,127 @@
   padding: 40px 20px 152px 20px;
 }
 
+/* === MODAL === */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 99;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  animation: fadeIn .5s ease;
+}
+
+.modal__inner {
+  max-width: 1020px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 73px 154px;
+  position: relative;
+}
+
+.modalText {
+  font-family: "Inter";
+  font-size: 20px;
+  line-height: 28px;
+  color: #2F2F22;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 12px;
+}
+
+.parentDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.label {
+  font-family: "Inter";
+  font-size: 20px;
+  line-height: 28px;
+  color: #2F2F22;
+}
+
+.input {
+  border: none;
+  padding: 36px 0;
+  border-bottom: 1px solid #D7D7D7;
+  font-family: "Inter";
+  font-size: 24px;
+  line-height: 30px;
+  color: #2F2F22;
+}
+
+.input:focus {
+  outline: none;
+}
+
+::placeholder {
+  font-family: "Exo 2";
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #DDDDDD;
+}
+
+.buttonSubmit {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  font-family: "Exo 2";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  background: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.buttonSubmit:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  transition: .3s;
+}
+
+.xBtn {
+  width: 60px;
+  height: 60px;
+  transition: .3s;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/* === SWIPER === */
+.swiper {
+  z-index: 0;
+}
+
+.swiper-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .tabSection.active {
   display: block;
 }
 
 .tabSection {
   display: none;
-}
-
-.swiper {
-  z-index: 0;
 }
 
 @media (max-width: 1800px) {
@@ -259,10 +347,7 @@
   .image {
     height: 360px;
   }
-  .isothermicImageDiv, .miniImagesDiv {
-    gap: 12px;
-  }
-  .miniImage, .miniImage2 {
+  .miniImage {
     height: 80px;
   }
   .isothermicCountNumber {
@@ -274,6 +359,36 @@
   .isothermic__title {
     font-size: 40px;
     line-height: 48px;
+  }
+  .modal__inner {
+    padding: 32px 100px;
+    max-width: 952px;
+  }
+  .modal__form {
+    margin-top: 24px;
+    gap: 32px;
+  }
+  .input {
+    padding: 8px 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  ::placeholder {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .label {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .modalText {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .buttonSubmit {
+    padding: 16px 20px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -288,17 +403,29 @@
     font-size: 16px;
     line-height: 24px;
   }
+  .xBtn {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 @media (max-width: 1024px) {
   .image {
     height: 280px;
   }
-  .miniImage, .miniImage2 {
+  .miniImage {
     height: 60px;
   }
-  .isothermic .section__inner {
-    grid-template-columns: .45fr .55fr;
+  .xBtn {
+    top: 12px;
+    right: 12px;
+  }
+  .modal__inner {
+    max-width: 700px;
+    padding: 48px;
+  }
+  .modal__form {
+    gap: 24px;
   }
 }
 
@@ -307,7 +434,7 @@
     font-size: 16px;
     line-height: 24px;
   }
-  .isothermic .section__inner {
+  .isothermic__inner {
     display: flex;
     flex-direction: column-reverse;
     gap: 16px;
@@ -315,16 +442,20 @@
   .image {
     height: 360px;
   }
-  .miniImage, .miniImage2 {
+  .miniImage{
     height: 100px;
   }
   .isothermic {
     border-bottom: none;
   }
+  .isothermicImageDiv {
+    width: 100%;
+  }
   .isothermicContent {
+    width: 100%;
     gap: 24px;
   }
-  .isothermicLinkDiv, .isothermic__link {
+  .isothermic__link, .isothermicLinkDiv {
     width: 100%;
     text-align: center;
   }
@@ -335,10 +466,10 @@
     font-size: 14px;
     line-height: 24px;
   }
-  .isothermic .section__inner:first-child {
+  .isothermic__inner:first-child {
     padding-top: 24px;
   }
-  .isothermic .section__inner {
+  .isothermic__inner {
     padding: 56px 20px 0 20px;
   }
   .isothermicCountNumber {
@@ -379,20 +510,40 @@
     font-size: 14px;
     line-height: 24px;
   }
+  .modal__inner {
+    max-width: 100%;
+    height: 100%;
+    padding: 48px;
+  }
+  .xBtn {
+    width: 32px;
+    height: 32px;
+  }
+  .modal__form {
+    margin-top: 48px;
+    gap: 48px;
+  }
+  .input {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 600px) {
   .image {
     height: 230px;
   }
-  .miniImagesDiv {
-    padding-inline: 13px;
-  }
-  .miniImage, .miniImage2 {
+  .miniImage {
     height: 46px;
   }
-}
-
-@media (max-width: 600px) {
-  
+  .centeredDiv {
+    margin-top: 0;
+    padding: 24px 20px 40px 20px;
+  }
+  .isothermic:last-child {
+    padding-bottom: 32px;
+  }
+  .miniImagesDiv {
+    padding: 0 13px;
+  }
 }

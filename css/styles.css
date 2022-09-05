@@ -874,6 +874,9 @@ a {
   .product__subtitle {
     max-width: 100%;
   }
+  .pageTitle {
+    -webkit-line-clamp: 2;
+  }
 }
 
 @media (max-width: 400px) {

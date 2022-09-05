@@ -375,16 +375,17 @@ header {
 
 @media (max-width: 600px) {
   #spectechs {
-    height: 600px;
+    height: 400px;
   }
   #spectechs .intro__inner > img {
-    max-height: 260px;
+    max-height: 160px;
     max-width: 100%;
     left: 0;
-    bottom: 32px;
+    bottom: 16px;
   }
   #spectechs > img {
-    max-height: 400px;
+    max-height: 200px;
+    height: 100%;
   }
   #spectechs .intro__inner {
     padding: 48px 20px;
