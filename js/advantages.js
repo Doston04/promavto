@@ -1,3 +1,22 @@
+const contentContainers = document.querySelectorAll(".contentContainer")
+const btns = document.querySelectorAll(".topButton")
+
+btns.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    contentContainers.forEach(container => {
+      container.classList.remove("active")
+    })
+    btns.forEach(btn => {
+      btn.classList.remove("active")
+    })
+
+    contentContainers[i].classList.add("active")
+    btns[i].classList.add("active")
+  })
+})
+
+
+
 const advantageTop = document.querySelectorAll(".advantageTop")
 const advantageBody = document.querySelectorAll(".advantageBottom")
 
