@@ -1,3 +1,8 @@
+#innerInner {
+  background-color: var(--black);
+  height: auto;
+}
+
 .intro, header {
   background: none;
 }
@@ -255,6 +260,15 @@
 }
 
 @media (max-width: 768px) {
+  #innerInner .intro__inner {
+    background-color: var(--black);
+  }
+  #innerInner .pageNavigation__text, #innerInner .pageTitle {
+    color: var(--white);
+  }
+  #innerInner .pageNavigation__text.blue {
+    color: var(--blue);
+  }
   .intro {
     height: 300px;
   }
