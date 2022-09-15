@@ -20,6 +20,8 @@ buttons.forEach((btn, i) => {
   })
 })
 
+const modal = document.querySelector(".videoModal")
+
 const services = document.querySelectorAll(".service")
 const serviceTextDivs = document.querySelectorAll(".serviceTextDiv")
 const serviceArrows = document.querySelectorAll(".serviceArrow")
